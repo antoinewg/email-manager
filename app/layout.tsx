@@ -29,7 +29,7 @@ export default async function RootLayout({
   } = await supabase.auth.getSession();
 
   return (
-    <html lang="en">
+    <html lang="en" data-theme="winter">
       <head />
       <body>
         <SupabaseProvider session={session}>
