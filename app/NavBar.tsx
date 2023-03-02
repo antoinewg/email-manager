@@ -7,7 +7,8 @@ export default function NavBar() {
         <Link href='/' className="btn btn-ghost normal-case text-xl">📧 email</Link>
       </div>
       <div className="navbar-end">
-        <Link href='/login' className="btn">Login</Link>
+        <Link href='/login' className="btn mr-2">Login</Link>
+        <Link href='/logout' className="btn">Logout</Link>
       </div>
     </div>
   )
