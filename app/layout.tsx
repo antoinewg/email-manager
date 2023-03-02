@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Email Manager',
-  description: 'Send email and manage your email templates',
+  description: 'Send emails and manage your templates',
 }
 
 export default function RootLayout({
