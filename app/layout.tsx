@@ -1,23 +1,43 @@
-import '../globals.css'
-import NavBar from './NavBar'
+import 'server-only';
 
-export const metadata = {
-  title: 'Email Manager',
-  description: 'Send emails and manage your templates',
-}
+import SupabaseListener from '../components/supabase-listener';
+import SupabaseProvider from '../components/supabase-provider';
+import Login from '../components/login';
+import { createServerClient } from '../utils/supabase-server';
 
-export default function RootLayout({
-  children,
+import type { SupabaseClient } from '@supabase/auth-helpers-nextjs';
+import type { Database } from '../lib/database.types';
+import './globals.css';
+
+// import NavBar from './NavBar'
+
+export type TypedSupabaseClient = SupabaseClient<Database>;
+
+// do not cache this layout
+export const revalidate = 0;
+
+
+export default async function RootLayout({
+  children
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
+  const supabase = createServerClient();
+
+  const {
+    data: { session }
+  } = await supabase.auth.getSession();
+
   return (
-    <html lang="en" data-theme="winter">
+    <html lang="en">
       <head />
       <body>
-        <NavBar />
-        {children}
+        <SupabaseProvider session={session}>
+          <SupabaseListener serverAccessToken={session?.access_token} />
+          <Login />
+          {children}
+        </SupabaseProvider>
       </body>
-    </html >
-  )
+    </html>
+  );
 }
