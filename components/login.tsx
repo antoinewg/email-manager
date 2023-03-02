@@ -6,9 +6,9 @@ import { useSupabase } from './supabase-provider';
 export default function Login() {
   const { supabase, session } = useSupabase();
 
-  const handleGitHubLogin = async () => {
+  const handleGoogleLogin = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'github'
+      provider: 'google'
     });
 
     if (error) {
@@ -31,7 +31,7 @@ export default function Login() {
     <button onClick={handleLogout}>Logout</button>
   ) : (
     <>
-      <button onClick={handleGitHubLogin}>GitHub Login</button>
+      <button className="btn" onClick={handleGoogleLogin}>google Login</button>
     </>
   );
 }
