@@ -1,4 +1,5 @@
 import '../globals.css'
+import NavBar from './NavBar'
 
 export const metadata = {
   title: 'Email Manager',
@@ -11,8 +12,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <html lang="en" data-theme="winter">
+      <head />
+      <body>
+        <NavBar />
+        {children}
+      </body>
+    </html >
   )
 }
