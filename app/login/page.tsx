@@ -1,6 +1,6 @@
 'use client'
 
-import { supabase } from "../../clients/supabase"
+import { supabase } from "../../utils/supabase"
 
 export default function Login() {
   async function handleSignIn() {
