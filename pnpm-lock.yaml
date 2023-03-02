@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@supabase/auth-helpers-nextjs': ^0.5.4
+  '@supabase/auth-ui-react': ^0.3.2
+  '@supabase/auth-ui-shared': ^0.1.1
   '@supabase/supabase-js': ^2.10.0
   '@types/node': 18.14.4
   '@types/react': 18.0.28
@@ -21,6 +23,8 @@ specifiers:
 
 dependencies:
   '@supabase/auth-helpers-nextjs': 0.5.4_ku2vntnma2imfrsyohnkxzette
+  '@supabase/auth-ui-react': 0.3.2_ku2vntnma2imfrsyohnkxzette
+  '@supabase/auth-ui-shared': 0.1.1_ku2vntnma2imfrsyohnkxzette
   '@supabase/supabase-js': 2.10.0_encoding@0.1.13
   '@types/node': 18.14.4
   '@types/react': 18.0.28
@@ -252,6 +256,10 @@ packages:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
     dev: false
 
+  /@stitches/core/1.2.8:
+    resolution: {integrity: sha512-Gfkvwk9o9kE9r9XNBmJRfV8zONvXThnm1tcuojL04Uy5uRyqg93DC83lDebl0rocZCfKSjUv+fWYtMQmEDJldg==}
+    dev: false
+
   /@supabase/auth-helpers-nextjs/0.5.4_ku2vntnma2imfrsyohnkxzette:
     resolution: {integrity: sha512-Xm3BMDOYPbNyuh8UXDRgBDc3JkeM5S2PfuC1jFJ73CCay4YiH1YxTz06Cvtp+vLH432qdjnqH+49ehVvUehPnQ==}
     peerDependencies:
@@ -265,6 +273,27 @@ packages:
     resolution: {integrity: sha512-c+hi3N6DhjPTzjXGOokre4gmMZOqt0f1ORrwZwi2s07pk3cbkmn77DwwVtlYMNi3oZNYRQqAfxJu83UzpJrrmg==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
+    dependencies:
+      '@supabase/supabase-js': 2.10.0_encoding@0.1.13
+    dev: false
+
+  /@supabase/auth-ui-react/0.3.2_ku2vntnma2imfrsyohnkxzette:
+    resolution: {integrity: sha512-R97lCERv6D4lhor5binGKgIvHVp6dvHkW1sPohVN4WJd1VM0KCVGFnAu/5Jku0nZ3BNOG/OFCmnOKIPr7nGLKQ==}
+    peerDependencies:
+      '@supabase/supabase-js': ^2.8.0
+    dependencies:
+      '@stitches/core': 1.2.8
+      '@supabase/auth-ui-shared': 0.1.1_ku2vntnma2imfrsyohnkxzette
+      '@supabase/supabase-js': 2.10.0_encoding@0.1.13
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@supabase/auth-ui-shared/0.1.1_ku2vntnma2imfrsyohnkxzette:
+    resolution: {integrity: sha512-45iOXEZV5p0NNqXtMZSnsxPXNUG9ZPpWmvltR5bLhJmj+AVoqqzoGx7ff0RnEJ1xR9asT7jduRLN8zT6ivXn1Q==}
+    peerDependencies:
+      '@supabase/supabase-js': ^2.8.0
     dependencies:
       '@supabase/supabase-js': 2.10.0_encoding@0.1.13
     dev: false
