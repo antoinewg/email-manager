@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:db": "npx supabase start",
+    "stop:db": "npx supabase stop",
+    "generate:types": "npx supabase gen types typescript --local > lib/database.types.ts"
   },
   "dependencies": {
     "@supabase/auth-helpers-nextjs": "^0.5.4",
