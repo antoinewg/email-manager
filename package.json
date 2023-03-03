@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "start:db": "npx supabase start",
-    "stop:db": "npx supabase stop",
+    "db:reset": "npx supabase db reset",
+    "db:start": "npx supabase start",
+    "db:stop": "npx supabase stop",
     "generate:migration": "npx supabase db diff <migration_name> -f <migration_name>",
     "generate:types": "npx supabase gen types typescript --local > lib/database.types.ts"
   },
