@@ -34,7 +34,26 @@ export interface Database {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      posts: {
+        Row: {
+          content: string | null
+          created_at: string | null
+          id: number
+          title: string | null
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string | null
+          id?: number
+          title?: string | null
+        }
+        Update: {
+          content?: string | null
+          created_at?: string | null
+          id?: number
+          title?: string | null
+        }
+      }
     }
     Views: {
       [_ in never]: never
