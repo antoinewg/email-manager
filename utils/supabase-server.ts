@@ -3,8 +3,4 @@ import { createServerComponentSupabaseClient } from '@supabase/auth-helpers-next
 
 import { Database } from '../lib/database.types';
 
-export const createServerClient = () =>
-  createServerComponentSupabaseClient<Database>({
-    headers,
-    cookies
-  });
+export const createServerClient = () => createServerComponentSupabaseClient<Database>({ headers, cookies });
